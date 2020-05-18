@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://sb.1data.vn">
-        <img width="200" src="./sbox-logo.jpg">
+        <img width="200" src="./sbox-logo.jpg"/>
     </a>
 </p>
 
@@ -12,7 +12,8 @@
 > This project was forked from the original ViewUI v4.2.0.
 
 ## Docs
-
+> The project is updating by the time and we have not developed a docs yet.
+> So if you want to use this project, you can follow viewUI v4.2.0 docs for installation and usage guide.
 **[4.x](https://www.iviewui.com)** | [3.x](http://v3.iviewui.com) | [2.x](http://v2.iviewui.com) | [1.x](http://v1.iviewui.com)
 
 ## Features
@@ -21,7 +22,7 @@
 - Friendly API. It's made for people with any skill level.
 - Extensive documentation and demos.
 - It is quite beautiful.
-- Supports Vue.js 2 and Vue.js 1.
+- Supports both Vue.js 2 and Vue.js 1.
 
 ### Install
 
@@ -65,4 +66,4 @@ import 'sbox-ds/dist/styles/sbox-ds.css';
 ## License
 [MIT](http://opensource.org/licenses/MIT)
 
-Copyright (c) 2016-present, ViewDesign
+Copyright (c) 2020, Sbox UI Team
