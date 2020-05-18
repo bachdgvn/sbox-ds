@@ -5,7 +5,7 @@
 </p>
 
 <h1>
-sbox-ds
+Sbox Design System
     <h3>Collection of UI Components based on Sbox Design System and Vue.js 2.0.</h3>
 </h1>
 
