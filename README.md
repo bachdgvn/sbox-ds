@@ -5,13 +5,11 @@
 </p>
 
 <h1>
-ViewUI
-    <h3>A high quality UI Toolkit built on Vue.js.</h3>
+sbox-ds
+    <h3>Collection of UI Components based on Sbox Design System and Vue.js 2.0.</h3>
 </h1>
 
-> 该项目即为原先的 iView。iView 作者将在此仓库继续开发 iView 4.0 和后续版本，以及维护工作。新的组件库命名为 ViewUI，原仓库 iView 作者不再提交内容。
-> 
-> This project is the original iView. The iView author will continue to develop iView 4.0 and subsequent releases, as well as maintenance work, in this repository. The new component library is named ViewUI, and the iView author will no longer continue to submit content in the original repository.
+> This project is based on the original ViewUI v4.2.0.
 
 [![](https://img.shields.io/travis/iview/iview.svg?style=flat-square)](https://travis-ci.org/iview/iview)
 [![View UI](https://img.shields.io/npm/v/view-design.svg?style=flat-square)](https://www.npmjs.org/package/view-design)
