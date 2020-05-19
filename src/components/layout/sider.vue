@@ -1,9 +1,9 @@
 <template>
-    <div 
-        :class="wrapClasses" 
+    <div
+        :class="wrapClasses"
         :style="wrapStyles">
         <span v-show="showZeroTrigger" @click="toggleCollapse" :class="zeroWidthTriggerClasses">
-            <i class="ivu-icon ivu-icon-ios-menu"></i>
+            <i class="ivu-icon ivu-icon-menu"></i>
         </span>
         <div :class="childClasses">
             <slot></slot>
@@ -124,7 +124,7 @@
                 }
                 let mediaMatched = this.mediaMatched;
                 this.mediaMatched = matchMedia(`(max-width: ${dimensionMap[this.breakpoint]})`).matches;
-                
+
                 if (this.mediaMatched !== mediaMatched) {
                     this.$emit('input', this.mediaMatched);
                 }

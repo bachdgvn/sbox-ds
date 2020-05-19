@@ -12,13 +12,15 @@ gulp.task('css', function () {
             browsers: ['last 2 versions', 'ie > 8']
         }))
         .pipe(cleanCSS())
-        .pipe(rename('iview.css'))
+        .pipe(rename('sbox-ds.css'))
         .pipe(gulp.dest('../dist/styles'));
 });
 
 // 拷贝字体文件
 gulp.task('fonts', function () {
     gulp.src('../src/styles/common/iconfont/fonts/*.*')
+        .pipe(gulp.dest('../dist/styles/fonts'));
+    gulp.src('../src/styles/common/fonts/Inter Web/*.*')
         .pipe(gulp.dest('../dist/styles/fonts'));
 });
 

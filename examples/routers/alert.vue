@@ -46,7 +46,7 @@
         </Alert>
         <Alert show-icon closable>
             自定义图标
-            <Icon type="ios-bulb-outline" slot="icon"></Icon>
+            <Icon type="bulb-outline" slot="icon"></Icon>
             <template slot="desc">自定义图标文案自定义图标文案自定义图标文案自定义图标文案自定义图标文案</template>
         </Alert>
         <Alert banner type="warning">Notice: notification contents...</Alert>
