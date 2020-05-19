@@ -39,7 +39,7 @@ import VueRouter from 'vue-router';
 import App from 'components/app.vue';
 import Routers from './router.js';
 import SboxDS from '@bachdgvn/sbox-ds';
-import 'sbox-ds/dist/styles/sbox-ds.css';
+import '@bachdgvn/sbox-ds/dist/styles/sbox-ds.css';
 
 Vue.use(VueRouter);
 Vue.use(SboxDS);
