@@ -31,27 +31,30 @@ Using npm:
 npm install @bachdgvn/sbox-ds --save
 ```
 
-## Usage
+## Quickstart
 
-```vue
-<template>
-    <Slider v-model="value" range />
-</template>
-<script>
-    export default {
-        data () {
-            return {
-                value: [20, 50]
-            }
-        }
-    }
-</script>
 ```
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import App from 'components/app.vue';
+import Routers from './router.js';
+import SboxDS from '@bachdgvn/sbox-ds';
+import '@bachdgvn/sbox-ds/dist/styles/sbox-ds.css';
 
-Using css via `import`:
+Vue.use(VueRouter);
+Vue.use(SboxDS);
 
-```js
-import 'sbox-ds/dist/styles/sbox-ds.css';
+// The routing configuration
+const RouterConfig = {
+    routes: Routers
+};
+const router = new VueRouter(RouterConfig);
+
+new Vue({
+    el: '#app',
+    router: router,
+    render: h => h(App)
+});
 ```
 
 ## Compatibility
