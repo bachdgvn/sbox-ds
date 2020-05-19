@@ -2,7 +2,7 @@
     <div style="margin: 100px">
         <AutoComplete
                 v-model="value4"
-                icon="ios-search"
+                icon="search"
                 placeholder="input here"
                 placement="bottom-start"
                 style="width:300px">

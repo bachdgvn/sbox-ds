@@ -4,38 +4,38 @@
         <Button to="/button">跳转到 Button（当前路径）</Button>
         <Button to="/button" replace>跳转到 Button（当前路径, replace）</Button>
         <Divider></Divider>
-        <Button icon="logo-github" size="small" shape="circle"></Button>
-        <Button icon="logo-github" shape="circle"></Button>
-        <Button icon="logo-github" size="large" shape="circle"></Button>
+        <Button icon="github" size="small" shape="circle"></Button>
+        <Button icon="github" shape="circle"></Button>
+        <Button icon="github" size="large" shape="circle"></Button>
 
-        <Button icon="logo-github" size="small"></Button>
+        <Button icon="github" size="small"></Button>
         <Button size="small">EN</Button>
 
-        <Button icon="logo-github"></Button>
+        <Button icon="github"></Button>
         <Button>EN</Button>
 
-        <Button icon="logo-github" size="large"></Button>
+        <Button icon="github" size="large"></Button>
         <Button size="large">EN</Button>
 
         <ButtonGroup size="small">
-            <Button icon="logo-github"></Button>
-            <Button icon="logo-twitter"></Button>
+            <Button icon="github"></Button>
+            <Button icon="twitter"></Button>
             <Button>
                 EN
             </Button>
         </ButtonGroup>
 
         <ButtonGroup>
-            <Button icon="logo-github"></Button>
-            <Button icon="logo-twitter"></Button>
+            <Button icon="github"></Button>
+            <Button icon="twitter"></Button>
             <Button>
                 ENs
             </Button>
         </ButtonGroup>
 
         <ButtonGroup size="large">
-            <Button icon="logo-github"></Button>
-            <Button icon="logo-twitter"></Button>
+            <Button icon="github"></Button>
+            <Button icon="twitter"></Button>
             <Button >
                 EN
             </Button>
@@ -120,14 +120,14 @@
         <Button type="warning">Warning</Button>
         <Button type="error">Error</Button>
         <br><br>
-        <Button type="primary" shape="circle" icon="ios-search"></Button>
-        <Button type="primary" icon="ios-search">Search</Button>
-        <Button type="primary" shape="circle" icon="ios-search">Search</Button>
+        <Button type="primary" shape="circle" icon="search"></Button>
+        <Button type="primary" icon="search">Search</Button>
+        <Button type="primary" shape="circle" icon="search">Search</Button>
         <Button type="primary" shape="circle">Circle</Button>
         <br><br>
-        <Button type="default" shape="circle" icon="ios-search"></Button>
-        <Button type="default" icon="ios-search">Search</Button>
-        <Button type="default" shape="circle" icon="ios-search">Search</Button>
+        <Button type="default" shape="circle" icon="search"></Button>
+        <Button type="default" icon="search">Search</Button>
+        <Button type="default" shape="circle" icon="search">Search</Button>
         <Button type="default" shape="circle">Circle</Button>
         <br><br>
         <Button>Default</Button>
@@ -248,19 +248,19 @@
         <br><br><br>
         <ButtonGroup vertical size="small">
             <Button icon="logo-facebook"></Button>
-            <Button icon="logo-twitter"></Button>
+            <Button icon="twitter"></Button>
             <Button icon="logo-googleplus"></Button>
             <Button icon="logo-tumblr"></Button>
         </ButtonGroup>
         <ButtonGroup vertical>
             <Button icon="logo-facebook"></Button>
-            <Button icon="logo-twitter"></Button>
+            <Button icon="twitter"></Button>
             <Button icon="logo-googleplus"></Button>
             <Button icon="logo-tumblr"></Button>
         </ButtonGroup>
         <ButtonGroup vertical size="large">
             <Button icon="logo-facebook"></Button>
-            <Button icon="logo-twitter"></Button>
+            <Button icon="twitter"></Button>
             <Button icon="logo-googleplus"></Button>
             <Button icon="logo-tumblr"></Button>
         </ButtonGroup>
