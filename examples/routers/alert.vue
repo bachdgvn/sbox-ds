@@ -25,12 +25,12 @@
         <Alert type="warning" show-icon>警告提示文案</Alert>
         <Alert type="error" show-icon>错误提示文案</Alert>
         <Alert show-icon>
-            消息提示文案
-            <template slot="desc">消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案消息提示的描述文案</template>
+            More
+            <template slot="desc">I count the steps from one end of my island to the other</template>
         </Alert>
         <Alert type="success" show-icon>
-            成功提示文案
-            <span slot="desc">成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案成功的提示描述文案</span>
+            Breeze
+            <span slot="desc">I know where I am from the scent of the breeze</span>
         </Alert>
         <Alert type="warning" show-icon>
             警告提示文案
@@ -62,9 +62,3 @@
         </Alert>
     </div>
 </template>
-<script>
-    import { Alert, Icon } from 'iview';
-    export default {
-        components: { Alert, Icon }
-    }
-</script>
