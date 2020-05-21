@@ -2,11 +2,12 @@
     <div>
         <div>
             <Input v-model="value" placeholder="Enter something..." style="width: 300px"></Input>
+            <Divider></Divider>
             <Input v-model="value11">
                 <span slot="prepend">http://</span>
                 <span slot="append">.com</span>
             </Input>
-            <br>
+            <Divider></Divider>
             <Input v-model="value12">
                 <Select v-model="select1" slot="prepend" style="width: 80px">
                     <Option value="http">http://</Option>
@@ -18,7 +19,9 @@
                     <Option value="io">.io</Option>
                 </Select>
             </Input>
-            <br>
+
+            <Divider></Divider>
+
             <Input v-model="value13">
                 <Select v-model="select3" slot="prepend" style="width: 80px">
                     <Option value="day">Day</Option>
@@ -26,33 +29,39 @@
                 </Select>
                 <Button slot="append" icon="search"></Button>
             </Input>
-            <br>
+
+            <Divider></Divider>
 
             <Input v-model="value11" size="small">
-            <span slot="prepend">http://</span>
-            <span slot="append">.com</span>
+                <span slot="prepend">http://</span>
+                <span slot="append">.com</span>
             </Input>
-            <br>
+
+            <Divider></Divider>
+
             <Input v-model="value12" size="small">
-            <Select v-model="select1" slot="prepend" style="width: 80px">
-                <Option value="http">http://</Option>
-                <Option value="https">https://</Option>
-            </Select>
-            <Select v-model="select2" slot="append" style="width: 70px">
-                <Option value="com">.com</Option>
-                <Option value="org">.org</Option>
-                <Option value="io">.io</Option>
-            </Select>
+                <Select size="small" v-model="select1" slot="prepend" style="width: 80px">
+                    <Option value="http">http://</Option>
+                    <Option value="https">https://</Option>
+                </Select>
+                <Select size="small" v-model="select2" slot="append" style="width: 70px">
+                    <Option value="com">.com</Option>
+                    <Option value="org">.org</Option>
+                    <Option value="io">.io</Option>
+                </Select>
             </Input>
-            <br>
+
+            <Divider></Divider>
+
             <Input v-model="value13" size="small">
-            <Select v-model="select3" slot="prepend" style="width: 80px">
-                <Option value="day">Day</Option>
-                <Option value="month">Month</Option>
-            </Select>
-            <Button slot="append" icon="search"></Button>
+                <Select size="small" v-model="select3" slot="prepend" style="width: 80px">
+                    <Option value="day">Day</Option>
+                    <Option value="month">Month</Option>
+                </Select>
+                <Button size="small" slot="append" icon="search"></Button>
             </Input>
-            <br>
+
+            <Divider></Divider>
 
             <Input v-model="value11" size="large">
             <span slot="prepend">http://</span>
