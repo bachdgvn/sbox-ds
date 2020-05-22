@@ -1,8 +1,8 @@
 <template>
     <component :is="tagName" :class="classes" :disabled="itemDisabled" @click="handleClickLink" v-bind="tagProps">
-        <Icon class="ivu-load-loop" type="ios-loading" v-if="loading"></Icon>
+        <Icon class="ivu-load-loop" type="loading" v-if="loading"></Icon>
         <Icon :type="icon" :custom="customIcon" v-if="(icon || customIcon) && !loading"></Icon>
-        <span v-if="showSlot" ref="slot"><slot></slot></span>
+        <span v-if="showSlot && !loading" ref="slot"><slot></slot></span>
     </component>
 </template>
 <script>

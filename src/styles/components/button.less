@@ -12,6 +12,10 @@
         margin-left: 4px;
     }
 
+    & > .ivu-icon + span, & > span + .ivu-icon, & > span > .ivu-icon{
+        vertical-align: middle;
+    }
+
     &-primary {
         .btn-primary;
 
@@ -111,8 +115,7 @@
         left: -1px;
         bottom: -1px;
         right: -1px;
-        background: #fff;
-        opacity: 0.35;
+        background: transparent;
         content: '';
         border-radius: inherit;
         z-index: 1;
