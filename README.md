@@ -13,7 +13,7 @@
 
 ## Docs
 > The project is updating by the time and we have not developed a docs yet.
-> So if you want to use this project, you can follow viewUI v4.2.0 docs for installation and usage guide.
+> So if you want to use this project, you can follow viewUI v4.2.0 docs for usage guide.
 **[4.x](https://www.iviewui.com)** | [3.x](http://v3.iviewui.com) | [2.x](http://v2.iviewui.com) | [1.x](http://v1.iviewui.com)
 
 ## Features
