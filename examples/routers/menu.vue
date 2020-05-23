@@ -7,6 +7,44 @@
                 <Radio label="dark"></Radio>
             </RadioGroup>
         </div>
+
+        <Divider></Divider>
+        <Row>
+            <Col span="24">
+                <Menu mode="horizontal" :theme="theme1" active-name="1">
+                    <MenuItem name="1">
+                        <Icon type="bluetooth-outline" />
+                        MenuItem
+                    </MenuItem>
+                    <MenuItem name="2">
+                        <Icon type="people-outline" />
+                        MenuItem
+                    </MenuItem>
+                    <Submenu name="3">
+                        <template slot="title">
+                            <Icon type="github-outline" />
+                            Submenu with template
+                        </template>
+                        <MenuGroup title="MenuGroup">
+                            <MenuItem name="3-1">MenuItem</MenuItem>
+                            <MenuItem name="3-2">MenuItem</MenuItem>
+                            <MenuItem name="3-3">MenuItem</MenuItem>
+                        </MenuGroup>
+                        <MenuGroup title="MenuGroup">
+                            <MenuItem name="3-4">MenuItem</MenuItem>
+                            <MenuItem name="3-5">MenuItem</MenuItem>
+                        </MenuGroup>
+                    </Submenu>
+                    <MenuItem name="4">
+                        <Icon type="facebook" />
+                        MenuItem
+                    </MenuItem>
+                </Menu>
+            </Col>
+        </Row>
+
+        <Divider></Divider>
+
         <Row>
             <Col span="8">
                 <Menu :theme="theme1">

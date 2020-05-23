@@ -30,6 +30,10 @@
         background: @primary-color;
     }
 
+    &-light&-horizontal{
+        border-bottom: 2px solid @border-color-base;
+    }
+
     &-item{
         display: block;
         outline: none;
@@ -59,7 +63,7 @@
     &-horizontal &-submenu
     {
         float: left;
-        padding: 0 20px;
+        margin-right: 35px;
         position: relative;
         cursor: pointer;
         z-index: 3;
@@ -74,6 +78,9 @@
         color: @text-color;
         &-active, &:hover{
             color: @primary-color;
+        }
+        &-active, &-selected{
+            border-bottom: 2px solid @primary-color;
         }
     }
 
