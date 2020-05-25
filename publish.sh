@@ -9,6 +9,11 @@ while read -r l; do
     fi
 done < package.json;
 
+# Commit new version
+git add --a
+git commit -m"[RELEASE] auto release $VERSION"
+git push origin develop
+
 # Versioning
 git tag v$VERSION
 git push origin --tag
