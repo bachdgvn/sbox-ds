@@ -30499,7 +30499,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 var API = (0, _extends3.default)({
-    version: '0.0.1-alpha-10',
+    version: '0.0.1-alpha-11',
     locale: _index2.default.use,
     i18n: _index2.default.i18n,
     install: install,
@@ -39526,11 +39526,11 @@ var messageInstance = void 0;
 var name = 1;
 
 var iconTypes = {
-    'info': 'ios-information-circle',
-    'success': 'ios-checkmark-circle',
-    'warning': 'ios-alert',
-    'error': 'ios-close-circle',
-    'loading': 'ios-loading'
+    'info': 'info-circle',
+    'success': 'checkmark-circle-2',
+    'warning': 'alert-triangle',
+    'error': 'close-circle',
+    'loading': 'loading'
 };
 
 function getMessageInstance() {
