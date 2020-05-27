@@ -10,7 +10,7 @@
             v-for="(item, index) in selectedMultiple"
             v-if="maxTagCount === undefined || index < maxTagCount">
             <span class="ivu-tag-text">{{ item.tag !== undefined ? item.tag : item.label }}</span>
-            <Icon type="ios-close" @click.native.stop="removeTag(item)"></Icon>
+            <Icon type="close" @click.native.stop="removeTag(item)"></Icon>
         </div><div class="ivu-tag ivu-tag-checked" v-if="maxTagCount !== undefined && selectedMultiple.length > maxTagCount">
             <span class="ivu-tag-text ivu-select-max-tag">
                 <template v-if="maxTagPlaceholder">{{ maxTagPlaceholder(selectedMultiple.length - maxTagCount) }}</template>
@@ -39,7 +39,7 @@
             @blur="onInputBlur"
 
             ref="input">
-        <Icon type="ios-close-circle" :class="[prefixCls + '-arrow']" v-if="resetSelect" @click.native.stop="onClear"></Icon>
+        <Icon type="close-circle" :class="[prefixCls + '-arrow']" v-if="resetSelect" @click.native.stop="onClear"></Icon>
         <Icon :type="arrowType" :custom="customArrowType" :size="arrowSize" :class="[prefixCls + '-arrow']" v-if="!resetSelect && !remote"></Icon>
     </div>
 </template>
@@ -186,7 +186,7 @@
             },
             // 3.4.0, global setting customArrow 有值时，arrow 赋值空
             arrowType () {
-                let type = 'ios-arrow-down';
+                let type = 'arrow-down';
 
                 if (this.$IVIEW) {
                     if (this.$IVIEW.select.customArrow) {
