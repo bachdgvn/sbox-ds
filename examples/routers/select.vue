@@ -15,7 +15,7 @@
         <br><br>
 
         <Select v-model="model1" style="width:200px">
-            <Icon type="ios-alarm" slot="prefix" color="red" />
+            <Icon type="clock" slot="prefix" color="red" />
             <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
         </Select>
 
