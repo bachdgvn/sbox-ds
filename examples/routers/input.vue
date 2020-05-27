@@ -94,23 +94,23 @@
             <Input
                     v-model="value"
                     size="small"
-                    prefix="ios-contact"
-                    suffix="ios-search"
+                    prefix="book"
+                    suffix="search"
                     placeholder="Enter something..."
                     style="width: 300px"></Input>
             <br>
             <Input
                     v-model="value"
-                    prefix="ios-contact"
-                    suffix="ios-search"
+                    prefix="book"
+                    suffix="search"
                     placeholder="Enter something..."
                     style="width: 300px"></Input>
             <br>
             <Input
                     v-model="value"
                     size="large"
-                    prefix="ios-contact"
-                    suffix="ios-search"
+                    prefix="book"
+                    suffix="search"
                     placeholder="Enter something..."
                     style="width: 300px"></Input>
             <br><br>

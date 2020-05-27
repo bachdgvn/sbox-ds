@@ -24,6 +24,10 @@ const router = new VueRouter({
     mode: 'history',
     routes: [
         {
+            path: '/font',
+            component: (resolve) => require(['./routers/font.vue'], resolve)
+        },
+        {
             path: '/split',
             component: (resolve) => require(['./routers/split.vue'], resolve)
         },

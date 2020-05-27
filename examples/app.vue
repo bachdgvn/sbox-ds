@@ -69,7 +69,7 @@
                             <MenuItem name="steps" to="/steps">
                                 Steps
                             </MenuItem>
-                            <MenuItem name="loadingbar" to="/loadingbar">
+                            <MenuItem name="loadingbar" to="/loading-bar">
                                 LoadingBar
                             </MenuItem>
                         </MenuGroup>
@@ -80,7 +80,7 @@
                             <MenuItem name="input" to="/input">
                                 Input
                             </MenuItem>
-                            <MenuItem name="inputnumber" to="/inputnumber">
+                            <MenuItem name="inputnumber" to="/input-number">
                                 InputNumber
                             </MenuItem>
                             <MenuItem name="radio" to="/radio">
