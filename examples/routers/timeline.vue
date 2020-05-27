@@ -44,8 +44,25 @@
         <Timeline-item><a href="#">查看更多</a></Timeline-item>
     </Timeline>
     <Timeline>
+        <Timeline-item>
+            <span>发布里程碑版本</span>
+            <div class="content">
+                <Alert type="success">
+                    A success prompt
+                    <template slot="desc">
+                        Content of prompt. Content of prompt. Content of prompt. Content of prompt.
+                    </template>
+                </Alert>
+            </div>
+        </Timeline-item>
+        <Timeline-item>发布1.0版本</Timeline-item>
+        <Timeline-item>发布2.0版本</Timeline-item>
+        <Timeline-item>发布3.0版本</Timeline-item>
+    </Timeline>
+
+    <Timeline>
         <Timeline-item color="green">
-            <Icon type="trophy" slot="dot"></Icon>
+            <Icon type="gift" slot="dot"></Icon>
             <span>发布里程碑版本</span>
         </Timeline-item>
         <Timeline-item>发布1.0版本</Timeline-item>

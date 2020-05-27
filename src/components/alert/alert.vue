@@ -10,7 +10,7 @@
             <span :class="descClasses"><slot name="desc"></slot></span>
             <a :class="closeClasses" v-if="closable" @click="close">
                 <slot name="close">
-                    <Icon type="ios-close"></Icon>
+                    <Icon type="close"></Icon>
                 </slot>
             </a>
         </div>
@@ -80,20 +80,20 @@
 
                 switch (this.type) {
                     case 'success':
-                        type = 'ios-checkmark-circle';
+                        type = 'checkmark-circle-2';
                         break;
                     case 'info':
-                        type = 'ios-information-circle';
+                        type = 'info';
                         break;
                     case 'warning':
-                        type = 'ios-alert';
+                        type = 'alert-triangle';
                         break;
                     case 'error':
-                        type = 'ios-close-circle';
+                        type = 'close-circle';
                         break;
                 }
 
-                if (this.desc) type += '-outline';
+                // if (this.desc) type += '-outline';
                 return type;
             }
         },

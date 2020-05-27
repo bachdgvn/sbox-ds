@@ -6,9 +6,9 @@
         </template>
         <div class="ivu-table-cell-tree-level" v-if="showLevel" :style="treeLevelStyle"></div>
         <div class="ivu-table-cell-tree" :class="{ 'ivu-table-cell-tree-loading': childrenLoading }" v-if="showChildren" @click.prevent.stop="handleToggleTree">
-            <Icon type="ios-loading" v-if="childrenLoading" class="ivu-load-loop" />
-            <Icon type="ios-add" v-else-if="!childrenExpand" />
-            <Icon type="ios-remove" v-else />
+            <Icon type="loading" v-if="childrenLoading" class="ivu-load-loop" />
+            <Icon type="plus" v-else-if="!childrenExpand" />
+            <Icon type="close" v-else />
         </div>
         <div class="ivu-table-cell-tree ivu-table-cell-tree-empty" v-else-if="showTreeNode"></div>
         <template v-if="renderType === 'html'"><span v-html="row[column.key]"></span></template>

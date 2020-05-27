@@ -310,7 +310,7 @@
                     }
                 }
 
-                if (this.showClose) type = 'ios-close-circle';
+                if (this.showClose) type = 'close-circle';
 
                 return type;
             },

@@ -57,8 +57,8 @@
                             <MenuItem name="page" to="/page">
                                 Page
                             </MenuItem>
-                            <MenuItem name="breadscrumb" to="/breadscrumb">
-                                Breadscrumb
+                            <MenuItem name="breadcrumb" to="/breadcrumb">
+                                Breadcrumb
                             </MenuItem>
                             <MenuItem name="badge" to="/badge">
                                 Badge
@@ -185,7 +185,7 @@
                             <MenuItem name="spin" to="/spin">
                                 Spin
                             </MenuItem>
-                            <MenuItem name="scroll" to="/breadscrumb">
+                            <MenuItem name="scroll" to="/scroll">
                                 Scroll
                             </MenuItem>
                         </MenuGroup>
