@@ -42,7 +42,7 @@
     </div>
 </template>
 <script>
-    const UserList = ['二', '小二', '三', '二个人'];
+    const UserList = ['Bách', 'An', 'Dương', 'Hoàng'];
     const ColorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
 
     export default {
