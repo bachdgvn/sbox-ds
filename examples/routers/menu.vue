@@ -50,7 +50,7 @@
                 <Menu :theme="theme1">
                     <Submenu name="1">
                         <template slot="title">
-                            <Icon type="ios-paper" />
+                            <Icon type="book" />
                             Submenu
                         </template>
                         <MenuItem name="1-1">MenuItem</MenuItem>
@@ -59,7 +59,7 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" />
+                            <Icon type="people" />
                             Submenu
                         </template>
                         <MenuItem name="2-1">MenuItem</MenuItem>
@@ -67,7 +67,7 @@
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" />
+                            <Icon type="archive" />
                             Submenu
                         </template>
                         <MenuGroup title="MenuGroup">
@@ -86,7 +86,7 @@
                 <Menu :theme="theme1" active-name="1-2" :open-names="['1']">
                     <Submenu name="1">
                         <template slot="title">
-                            <Icon type="ios-paper" />
+                            <Icon type="book" />
                             Submenu
                         </template>
                         <MenuItem name="1-1">MenuItem</MenuItem>
@@ -95,7 +95,7 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" />
+                            <Icon type="people" />
                             Submenu
                         </template>
                         <MenuItem name="2-1">MenuItem</MenuItem>
@@ -103,7 +103,7 @@
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" />
+                            <Icon type="archive" />
                             Submenu
                         </template>
                         <MenuGroup title="MenuGroup">
@@ -122,7 +122,7 @@
                 <Menu :theme="theme1" :open-names="['1']" accordion>
                     <Submenu name="1">
                         <template slot="title">
-                            <Icon type="ios-paper" />
+                            <Icon type="book" />
                             Submenu
                         </template>
                         <MenuItem name="1-1">MenuItem</MenuItem>
@@ -131,7 +131,7 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" />
+                            <Icon type="people" />
                             Submenu
                         </template>
                         <MenuItem name="2-1">MenuItem</MenuItem>
@@ -139,7 +139,7 @@
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" />
+                            <Icon type="archive" />
                             Submenu
                         </template>
                         <MenuGroup title="MenuGroup">
@@ -161,7 +161,7 @@
                 <Menu :theme="theme1">
                     <Submenu name="1">
                         <template slot="title">
-                            <Icon type="ios-paper" />
+                            <Icon type="book" />
                             Submenu
                         </template>
                         <MenuItem name="1-1">MenuItem</MenuItem>
@@ -170,7 +170,7 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" />
+                            <Icon type="people" />
                             Submenu
                         </template>
                         <MenuItem name="2-1">MenuItem</MenuItem>
@@ -178,7 +178,7 @@
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" />
+                            <Icon type="archive" />
                             Submenu
                         </template>
                         <MenuGroup title="MenuGroup">
@@ -197,7 +197,7 @@
                 <Menu :theme="theme1" active-name="1-2" :open-names="['1']">
                     <Submenu name="1">
                         <template slot="title">
-                            <Icon type="ios-paper" />
+                            <Icon type="book" />
                             Submenu
                         </template>
                         <MenuItem name="1-1">MenuItem</MenuItem>
@@ -206,7 +206,7 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" />
+                            <Icon type="people" />
                             Submenu
                         </template>
                         <MenuItem name="2-1">MenuItem</MenuItem>
@@ -214,7 +214,7 @@
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" />
+                            <Icon type="archive" />
                             Submenu
                         </template>
                         <MenuGroup title="MenuGroup">
@@ -233,7 +233,7 @@
                 <Menu :theme="theme1" :open-names="['1']" accordion>
                     <Submenu name="1">
                         <template slot="title">
-                            <Icon type="ios-paper" />
+                            <Icon type="book" />
                             Submenu
                         </template>
                         <MenuItem name="1-1">MenuItem</MenuItem>
@@ -242,7 +242,7 @@
                     </Submenu>
                     <Submenu name="2">
                         <template slot="title">
-                            <Icon type="ios-people" />
+                            <Icon type="people" />
                             Submenu
                         </template>
                         <MenuItem name="2-1">MenuItem</MenuItem>
@@ -250,7 +250,7 @@
                     </Submenu>
                     <Submenu name="3">
                         <template slot="title">
-                            <Icon type="ios-stats" />
+                            <Icon type="archive" />
                             Submenu
                         </template>
                         <MenuGroup title="MenuGroup">
