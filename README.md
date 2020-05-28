@@ -3,6 +3,7 @@
         <img width="200" src="./sbox-logo.jpg"/>
     </a>
 </p>
+[![Run on Repl.it](https://repl.it/badge/github/bachdgvn/sbox-ds)](https://repl.it/github/bachdgvn/sbox-ds)
 
 <h1>
     Sbox Design System
