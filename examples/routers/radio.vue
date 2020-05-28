@@ -10,15 +10,15 @@
         <br><br>
         <Radio-group v-model="phone">
             <Radio label="apple">
-                <Icon type="logo-apple"></Icon>
+                <Icon type="behance"></Icon>
                 <span>Apple</span>
             </Radio>
             <Radio label="android">
-                <Icon type="social-android"></Icon>
+                <Icon type="linkedin"></Icon>
                 <span>Android</span>
             </Radio>
             <Radio label="windows">
-                <Icon type="social-windows"></Icon>
+                <Icon type="github"></Icon>
                 <span>Windows</span>
             </Radio>
         </Radio-group>
@@ -43,7 +43,7 @@
         <Divider></Divider>
         <Radio-group v-model="phone" size="small">
             <Radio label="apple" border>
-                <Icon type="logo-apple"></Icon>
+                <Icon type="behance"></Icon>
                 <span>选项一</span>
             </Radio>
             <Radio label="android" border>
@@ -70,7 +70,7 @@
         <br><br>
         <Radio-group v-model="phone" size="large">
             <Radio label="apple" border>
-                <Icon type="logo-apple"></Icon>
+                <Icon type="behance"></Icon>
                 <span>选项一</span>
             </Radio>
             <Radio label="android" border>

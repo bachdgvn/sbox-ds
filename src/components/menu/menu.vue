@@ -19,9 +19,9 @@
             },
             theme: {
                 validator (value) {
-                    return oneOf(value, ['light', 'dark', 'primary']);
+                    return oneOf(value, ['default', 'light', 'dark', 'primary']);
                 },
-                default: 'light'
+                default: 'default'
             },
             activeName: {
                 type: [String, Number]
@@ -38,7 +38,7 @@
             },
             width: {
                 type: String,
-                default: '240px'
+                default: '100%'
             }
         },
         data () {

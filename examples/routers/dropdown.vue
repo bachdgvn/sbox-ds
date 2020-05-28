@@ -1,27 +1,26 @@
 <template>
     <div>
-        <DatePicker :capture="false" size="small" v-model="updatedate" type="datetimerange" placement="bottom-end" placeholder="请输入变更时间" style="width: 150px"></DatePicker>
         <Dropdown trigger="click" transfer @on-click="aaaa(111)">
             <Button  size="small" type="primary">
-                更多
+                Dropdown
                 <Icon type="md-arrow-dropdown" />
             </Button>
             <DropdownMenu slot="list">
-                <DropdownItem>驴打滚</DropdownItem>
-                <DropdownItem>炸酱面</DropdownItem>
-                <DropdownItem>豆汁儿</DropdownItem>
-                <DropdownItem>冰糖葫芦</DropdownItem>
-                <DropdownItem>北京烤鸭</DropdownItem>
-                <DropdownItem>驴打滚</DropdownItem>
-                <DropdownItem>炸酱面</DropdownItem>
-                <DropdownItem>豆汁儿</DropdownItem>
-                <DropdownItem>冰糖葫芦</DropdownItem>
-                <DropdownItem>北京烤鸭</DropdownItem>
-                <DropdownItem>驴打滚</DropdownItem>
-                <DropdownItem>炸酱面</DropdownItem>
-                <DropdownItem>豆汁儿</DropdownItem>
-                <DropdownItem>冰糖葫芦</DropdownItem>
-                <DropdownItem>北京烤鸭</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
+                <DropdownItem>DropdownItem</DropdownItem>
             </DropdownMenu>
         </Dropdown>
         <Cascader :data="data" v-model="value1" transfer style="width: 200px"></Cascader>
@@ -42,47 +41,47 @@
                 color1: '#19be6b',
                 value1: [],
                 data: [{
-                    value: 'beijing',
-                    label: '北京',
+                    value: 'Hà Nội',
+                    label: 'Hà Nội',
                     children: [
                         {
-                            value: 'gugong',
-                            label: '故宫'
+                            value: 'BaDinh',
+                            label: 'Ba Đình'
                         },
                         {
-                            value: 'tiantan',
-                            label: '天坛'
+                            value: 'DongDa',
+                            label: 'Đống Đa'
                         },
                         {
-                            value: 'wangfujing',
-                            label: '王府井'
+                            value: 'CauGiay',
+                            label: 'Cầu Giấy'
                         }
                     ]
                 }, {
-                    value: 'jiangsu',
-                    label: '江苏',
+                    value: 'HCM',
+                    label: 'Hồ Chí Minh',
                     children: [
                         {
-                            value: 'nanjing',
-                            label: '南京',
+                            value: 'Quan1',
+                            label: 'Quận 1',
                             children: [
                                 {
-                                    value: 'fuzimiao',
-                                    label: '夫子庙',
+                                    value: 'Phuong12',
+                                    label: 'Phường 12',
                                 }
                             ]
                         },
                         {
-                            value: 'suzhou',
-                            label: '苏州',
+                            value: 'QuanBinhTan',
+                            label: 'Quận Bình Tân',
                             children: [
                                 {
-                                    value: 'zhuozhengyuan',
-                                    label: '拙政园',
+                                    value: 'PhuongBinhThanhA',
+                                    label: 'Phường Bình Thạnh A',
                                 },
                                 {
-                                    value: 'shizilin',
-                                    label: '狮子林',
+                                    value: 'PhuongBinhThanhB',
+                                    label: 'Phường Bình Thạnh B',
                                 }
                             ]
                         }
@@ -119,7 +118,7 @@
         },
         methods: {
             aaaa(){
-                this.$Message.info("aaaaa")
+                this.$Message.info("aaaaa");
             }
         },
         mounted () {

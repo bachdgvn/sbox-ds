@@ -60,11 +60,11 @@
         </div>
         <div style="margin: 50px">
             <Badge dot>
-                <a href="//iviewui.com">我是一个链接</a>
+                <a href="//iviewui.com">I'm a link</a>
             </Badge>
             <br><br>
             <Badge :count="10" :offset="[-5, -5]">
-                <a href="//iviewui.com">我是一个链接</a>
+                <a href="//iviewui.com">I'm a link</a>
             </Badge>
         </div>
         <div>

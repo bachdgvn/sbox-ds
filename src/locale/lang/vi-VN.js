@@ -95,6 +95,15 @@ const lang = {
             star: 'Sao',
             stars: 'Sao'
         },
+        time: {
+            before: ' trước ',
+            after: ' sau ',
+            just: ' vừa xong ',
+            seconds: ' giây ',
+            minutes: ' phút ',
+            hours: ' giờ ',
+            days: ' ngày '
+        },
         tree: {
             emptyText: 'Không có dữ liệu'
         }

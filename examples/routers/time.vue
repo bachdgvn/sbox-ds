@@ -12,7 +12,7 @@
     </div>
 </template>
 <script>
-    const baseTime = parseInt(Date.now() / 10000000) * 10000000
+    const baseTime = parseInt(Date.now() / 10000000) * 10000000;
 
     export default {
         data () {
@@ -26,7 +26,7 @@
 
         methods: {
             testUpdate() {
-                this.time1 = parseInt(baseTime + Math.random() * 10000000)
+                this.time1 = parseInt(baseTime + Math.random() * 10000000);
             }
         }
     };

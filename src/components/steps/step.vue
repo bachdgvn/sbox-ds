@@ -70,9 +70,9 @@
                     icon = this.icon;
                 } else {
                     if (this.currentStatus === 'finish') {
-                        icon = 'ios-checkmark';
+                        icon = 'checkmark';
                     } else if (this.currentStatus === 'error') {
-                        icon = 'ios-close';
+                        icon = 'close';
                     }
                 }
 

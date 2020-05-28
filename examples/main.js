@@ -7,7 +7,7 @@ import VueRouter from 'vue-router';
 import App from './app.vue';
 import iView from '../src/index';
 // import locale from '../src/locale/lang/en-US';
-import locale from '../src/locale/lang/zh-CN';
+import locale from '../src/locale/lang/vi-VN';
 
 Vue.use(VueRouter);
 Vue.use(iView, {
@@ -23,6 +23,10 @@ const router = new VueRouter({
     esModule: false,
     mode: 'history',
     routes: [
+        {
+            path: '/font',
+            component: (resolve) => require(['./routers/font.vue'], resolve)
+        },
         {
             path: '/split',
             component: (resolve) => require(['./routers/split.vue'], resolve)

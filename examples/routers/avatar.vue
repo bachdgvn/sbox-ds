@@ -4,45 +4,45 @@
         <Button size="small" @click="handleChange">Change</Button>
         <div>
             <div class="demo-avatar">
-                <Avatar icon="ios-person" size="large" />
-                <Avatar icon="ios-person" />
-                <Avatar icon="ios-person" size="small" />
+                <Avatar icon="people" size="large" />
+                <Avatar icon="people" />
+                <Avatar icon="people" size="small" />
             </div>
             <div class="demo-avatar">
-                <Avatar shape="square" icon="ios-person" size="large" />
-                <Avatar shape="square" icon="ios-person" />
-                <Avatar shape="square" icon="ios-person" size="small" />
+                <Avatar shape="square" icon="people" size="large" />
+                <Avatar shape="square" icon="people" />
+                <Avatar shape="square" icon="people" size="small" />
             </div>
         </div>
         <div class="demo-avatar">
-            <Avatar icon="ios-person" />
+            <Avatar icon="people" />
             <Avatar>U</Avatar>
             <Avatar>USER</Avatar>
             <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" />
             <Avatar style="color: #f56a00;background-color: #fde3cf">U</Avatar>
-            <Avatar style="background-color: #87d068" icon="ios-person" />
+            <Avatar style="background-color: #87d068" icon="people" />
         </div>
         <div class="demo-avatar-badge">
             <Badge :count="1">
-                <Avatar shape="square" icon="ios-person" />
+                <Avatar shape="square" icon="people" />
             </Badge>
             <Badge dot>
-                <Avatar shape="square" icon="ios-person" />
+                <Avatar shape="square" icon="people" />
             </Badge>
         </div>
         <br><br><br>
-        <Avatar custom-icon="ivu-icon-ios-person" />
+        <Avatar custom-icon="ivu-icon-people" />
 
         <Avatar :src="src" size="large" @on-error="handleError" />
         <Divider></Divider>
         <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" size="64" shape="square" />
         <Avatar src="https://i.loli.net/2017/08/21/599a521472424.jpg" size="64" shape="circle" />
-        <Avatar icon="ios-person" size="64" shape="circle" />
+        <Avatar icon="people" size="64" shape="circle" />
         <Avatar size="42">U</Avatar>
     </div>
 </template>
 <script>
-    const UserList = ['二', '小二', '三', '二个人'];
+    const UserList = ['Bách', 'An', 'Dương', 'Hoàng'];
     const ColorList = ['#f56a00', '#7265e6', '#ffbf00', '#00a2ae'];
 
     export default {

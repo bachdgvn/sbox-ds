@@ -5,7 +5,7 @@
     flex-direction: column;
     flex: auto;
     background: @layout-body-background;
-    
+
     &&-has-sider {
         flex-direction: row;
         > .@{layout-prefix-cls},
@@ -30,6 +30,7 @@
         transition: all .2s @ease-in-out;
         position: relative;
         background: @layout-sider-background;
+        padding: 0 5px;
 
         min-width: 0;
 
@@ -86,7 +87,7 @@
                 border-radius: 0 @border-radius-base @border-radius-base 0;
                 cursor: pointer;
                 transition: background .3s ease;
-        
+
                 &:hover {
                   background: tint(@layout-sider-background, 10%);
                 }

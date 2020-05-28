@@ -14,8 +14,8 @@ module.exports = merge(webpackBaseConfig, {
     output: {
         path: path.resolve(__dirname, '../dist'),
         publicPath: '/dist/',
-        filename: 'iview.js',
-        library: 'iview',
+        filename: 'sbox-ds.js',
+        library: 'sbox-ds',
         libraryTarget: 'umd',
         umdNamedDefine: true
     },

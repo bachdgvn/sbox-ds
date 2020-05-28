@@ -19,7 +19,7 @@
     &-label-top .@{form-item-prefix-cls}-label {
         float: none;
         display: inline-block;
-        padding: 0 0 10px 0;
+        padding: 0 0 7px 0;
     }
     &-inline{
         .@{form-item-prefix-cls} {
@@ -36,15 +36,15 @@
     .clearfix();
     &-content {
         position: relative;
-        line-height: 1.5;
+        line-height: @input-height-base;
         font-size: @font-size-base;
     }
-    & & {
-        margin-bottom: 0;
-    }
-    & & &-content {
-        margin-left: 0!important;
-    }
+    //& & {
+    //    margin-bottom: 0;
+    //}
+    //& & &-content {
+    //    margin-left: 0!important;
+    //}
 
     &-error-tip{
         position: absolute;

@@ -10,8 +10,8 @@
                 @keydown.space.prevent="handleTabKeyboardSelect(false)"
             >
                 <div ref="navWrap" :class="[prefixCls + '-nav-wrap', scrollable ? prefixCls + '-nav-scrollable' : '']">
-                    <span :class="[prefixCls + '-nav-prev', scrollable ? '' : prefixCls + '-nav-scroll-disabled']" @click="scrollPrev"><Icon type="ios-arrow-back"></Icon></span>
-                    <span :class="[prefixCls + '-nav-next', scrollable ? '' : prefixCls + '-nav-scroll-disabled']" @click="scrollNext"><Icon type="ios-arrow-forward"></Icon></span>
+                    <span :class="[prefixCls + '-nav-prev', scrollable ? '' : prefixCls + '-nav-scroll-disabled']" @click="scrollPrev"><Icon type="arrow-back"></Icon></span>
+                    <span :class="[prefixCls + '-nav-next', scrollable ? '' : prefixCls + '-nav-scroll-disabled']" @click="scrollNext"><Icon type="arrow-forward"></Icon></span>
                     <div ref="navScroll" :class="[prefixCls + '-nav-scroll']" @DOMMouseScroll="handleScroll" @mousewheel="handleScroll">
                         <div ref="nav" :class="[prefixCls + '-nav']" :style="navStyle">
                             <div :class="barClasses" :style="barStyle"></div>
@@ -172,7 +172,7 @@
             },
             // 3.4.0, global setting customArrow 有值时，arrow 赋值空
             arrowType () {
-                let type = 'ios-close';
+                let type = 'close';
 
                 if (this.$IVIEW) {
                     if (this.$IVIEW.tabs.customCloseIcon) {
@@ -259,7 +259,7 @@
 
                     if (index > 0) {
                         let offset = 0;
-                        const gutter = this.size === 'small' ? 0 : 16;
+                        const gutter = this.size === 'small' ? 0 : 35;
                         for (let i = 0; i < index; i++) {
                             offset += parseFloat(prevTabs[i].offsetWidth) + gutter;
                         }

@@ -9,7 +9,7 @@
                     <div :class="contentClasses" ref="content">
                         <a class="ivu-drawer-close" v-if="closable" @click="close">
                             <slot name="close">
-                                <Icon type="ios-close"></Icon>
+                                <Icon type="close"></Icon>
                             </slot>
                         </a>
                         <div :class="[prefixCls + '-header']" v-if="showHead"><slot name="header"><div :class="[prefixCls + '-header-inner']">{{ title }}</div></slot></div>

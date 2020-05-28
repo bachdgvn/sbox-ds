@@ -16,7 +16,7 @@
                     :class="[prefixCls + '-label']"
                     v-show="filterable && query === ''"
                     @click="handleFocus">{{ displayRender }}</div>
-                <Icon type="ios-close-circle" :class="[prefixCls + '-arrow']" v-show="showCloseIcon" @click.native.stop="clearSelect"></Icon>
+                <Icon type="close-circle" :class="[prefixCls + '-arrow']" v-show="showCloseIcon" @click.native.stop="clearSelect"></Icon>
                 <Icon :type="arrowType" :custom="customArrowType" :size="arrowSize" :class="[prefixCls + '-arrow']"></Icon>
             </slot>
         </div>
