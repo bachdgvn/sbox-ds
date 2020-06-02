@@ -8,7 +8,7 @@ const runSequence = require('gulp4-run-sequence');
 // 编译less
 gulp.task('css', async () => {
     return gulp.src('../src/styles/index.less')
-        .pipe(less())
+        .pipe(less({javascriptEnabled: true}))
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'ie > 8']
         }))
