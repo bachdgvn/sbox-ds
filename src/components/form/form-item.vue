@@ -201,7 +201,6 @@
 
                 const validator = new AsyncValidator(descriptor);
                 let model = {};
-                console.log('xxxxxxxxxxxxxxxxxxxxxxxxx: ', this.fieldValue);
 
                 model[this.prop] = this.fieldValue;
 
