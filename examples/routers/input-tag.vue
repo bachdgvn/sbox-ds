@@ -5,6 +5,7 @@
         </Divider>
 
         <InputTag v-model="value"
+                  @input="handleInput"
                   placeholder="Enter something..."
                   style="width: 300px"></InputTag>
 
@@ -53,7 +54,7 @@
             };
         },
         methods: {
-            hs (val) {
+            handleInput (val) {
                 console.log(val);
             }
         }

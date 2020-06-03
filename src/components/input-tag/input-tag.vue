@@ -184,12 +184,8 @@
         },
         methods: {
             setCurrentValue (value) {
-                if (JSON.stringify(value) !== JSON.stringify(this.innerTags)) {
-                    return this.innerTags = [...value];
-                }
                 const vModelValue = value;
                 this.$emit('input', vModelValue);
-                this.$emit('on-change', vModelValue);
                 this.dispatch('FormItem', 'on-form-change', vModelValue);
             },
             handleInputBlur (e) {
@@ -216,8 +212,6 @@
                 if(this.isActive) {
                     this.isActive = false;
                     this.$emit('on-blur', event);
-                    const vModelValue = this.innerTags;
-                    this.$emit('input', vModelValue);
                     this.dispatch('FormItem', 'on-form-blur', this.innerTags);
                 }
             },
@@ -241,8 +235,8 @@
                     isValid &&
                     (this.allowDuplicates || this.innerTags.indexOf(tag) === -1)
                 ) {
-                    this.innerTags.push(tag);
                     this.newTag = '';
+                    this.innerTags.push(tag);
                     this.setCurrentValue(this.innerTags);
                     e && e.preventDefault();
                 }
@@ -284,7 +278,7 @@
         },
         watch: {
             value (val) {
-                this.setCurrentValue(val);
+                this.innerTags = [...val];
             }
         },
     };
