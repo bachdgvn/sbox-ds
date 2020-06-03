@@ -189,6 +189,7 @@
                 }
                 const vModelValue = value;
                 this.$emit('input', vModelValue);
+                this.$emit('on-change', vModelValue);
                 this.dispatch('FormItem', 'on-form-change', vModelValue);
             },
             handleInputBlur (e) {
