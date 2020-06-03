@@ -184,7 +184,6 @@
                 return rules.filter(rule => !rule.trigger || rule.trigger.indexOf(trigger) !== -1);
             },
             validate(trigger, callback = function () {}) {
-                console.log('xxxxxxxxxxxxxxxxxxxxxxxxx');
                 let rules = this.getFilteredRule(trigger);
                 if (!rules || rules.length === 0) {
                     if (!this.required) {
@@ -202,6 +201,7 @@
 
                 const validator = new AsyncValidator(descriptor);
                 let model = {};
+                console.log('xxxxxxxxxxxxxxxxxxxxxxxxx: ', this.fieldValue);
 
                 model[this.prop] = this.fieldValue;
 

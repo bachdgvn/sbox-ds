@@ -184,9 +184,12 @@
         },
         methods: {
             setCurrentValue (value) {
-                if (JSON.stringify(value) === JSON.stringify(this.innerTags)) return;
-                this.innerTags = [...this.value];
-                this.dispatch('FormItem', 'on-form-change', value);
+                if (JSON.stringify(value) !== JSON.stringify(this.innerTags)) {
+                    return this.innerTags = [...value];
+                }
+                const vModelValue = value;
+                this.$emit('input', vModelValue);
+                this.dispatch('FormItem', 'on-form-change', vModelValue);
             },
             handleInputBlur (e) {
                 this.addNew(e);
@@ -217,13 +220,6 @@
                     this.dispatch('FormItem', 'on-form-blur', this.innerTags);
                 }
             },
-            handleClear () {
-                const e = { target: { value: [] } };
-                this.$emit('input', []);
-                this.setCurrentValue([]);
-                this.$emit('on-change', e);
-                this.$emit('on-clear');
-            },
             async addNew(e) {
                 const keyShouldAddTag = e
                     ? this.addTagOnKeys.indexOf(e.keyCode) !== -1
@@ -246,7 +242,7 @@
                 ) {
                     this.innerTags.push(tag);
                     this.newTag = '';
-                    this.tagChange();
+                    this.setCurrentValue(this.innerTags);
                     e && e.preventDefault();
                 }
             },
@@ -274,7 +270,7 @@
             remove(index) {
                 if(this.itemDisabled) return;
                 this.innerTags.splice(index, 1);
-                this.tagChange();
+                this.setCurrentValue(this.innerTags);
             },
             removeLastTag() {
                 if(this.itemDisabled) return;
@@ -282,10 +278,7 @@
                     return;
                 }
                 this.innerTags.pop();
-                this.tagChange();
-            },
-            tagChange() {
-                this.$emit('@on-change', this.innerTags);
+                this.setCurrentValue(this.innerTags);
             },
         },
         watch: {

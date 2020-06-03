@@ -317,8 +317,8 @@
                         { type: 'array', max: 2, message: 'Choose two hobbies at best', trigger: 'change' }
                     ],
                     keywords: [
-                        { required: true, type: 'array', min: 1, message: 'Enter at least one keyword', trigger: 'blur' },
-                        { type: 'array', max: 2, message: 'Enter two keywords at best', trigger: 'blur' }
+                        { required: true, type: 'array', min: 1, message: 'Enter at least one keyword', trigger: 'change' },
+                        { type: 'array', max: 2, message: 'Enter two keywords at best', trigger: 'change' }
                     ],
                     date: [
                         { required: true, type: 'date', message: 'Please select the date', trigger: 'change' }
