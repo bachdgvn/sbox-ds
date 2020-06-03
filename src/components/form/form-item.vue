@@ -184,6 +184,7 @@
                 return rules.filter(rule => !rule.trigger || rule.trigger.indexOf(trigger) !== -1);
             },
             validate(trigger, callback = function () {}) {
+                console.log('xxxxxxxxxxxxxxxxxxxxxxxxx');
                 let rules = this.getFilteredRule(trigger);
                 if (!rules || rules.length === 0) {
                     if (!this.required) {

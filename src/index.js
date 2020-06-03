@@ -26,6 +26,7 @@ import Form from './components/form';
 import Header from './components/header';
 import Icon from './components/icon';
 import Input from './components/input';
+import InputTag from './components/input-tag';
 import InputNumber from './components/input-number';
 import Scroll from './components/scroll';
 import Split from './components/split';
@@ -97,6 +98,7 @@ const components = {
     Header: Header,
     Icon,
     Input,
+    InputTag,
     InputNumber,
     Scroll,
     Sider: Sider,

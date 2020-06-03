@@ -59,7 +59,7 @@
         top: 0;
         left: 0;
         background-color: #fff;
-        border: 1px solid @border-color-base;
+        border: 2px solid @border-color-base;
         border-radius: 50%;
         transition: all @transition-time @ease-in-out;
 
@@ -133,6 +133,14 @@
         height: @btn-height-large;
         line-height: @btn-height-large - 4px;
         padding: @btn-padding-large;
+    }
+}
+
+.@{form-item-prefix-cls}-error{
+    .@{radio-prefix-cls} {
+        &-inner{
+            border-color: @error-color;
+        }
     }
 }
 

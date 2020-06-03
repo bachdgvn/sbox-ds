@@ -2,7 +2,7 @@
     <div style="margin: 100px;">
         <row :gutter="64">
             <i-col span="12">
-                <Form ref="formValidate1" :model="formValidate" :rules="ruleValidate" :label-width="80">
+                <Form ref="formValidate1" :model="formValidate" :rules="ruleValidate" :label-width="100">
                     <FormItem label="Name" prop="name">
                         <Input v-model="formValidate.name" placeholder="Enter your name"></Input>
                     </FormItem>
@@ -15,6 +15,9 @@
                             <Option value="shanghai">London</Option>
                             <Option value="shenzhen">Sydney</Option>
                         </Select>
+                    </FormItem>
+                    <FormItem label="Keywords" prop="keywords">
+                        <InputTag v-model="formValidate.keywords" placeholder="Enter your keywords"></InputTag>
                     </FormItem>
                     <FormItem label="Date">
                         <Row>
@@ -57,7 +60,8 @@
                     <FormItem label="AutoComplete" prop="autoComplete">
                         <AutoComplete
                                 v-model="formValidate.autoComplete"
-                                :data="data1"
+                                :data="
+                                1"
                                 @on-search="handleSearch1"
                                 placeholder="input here"
                                 style="width:200px"></AutoComplete>
@@ -86,7 +90,7 @@
                 </Form>
             </i-col>
             <i-col span="12">
-                <Form disabled ref="formValidate2" :model="formValidate" :rules="ruleValidate" :label-width="80">
+                <Form disabled ref="formValidate2" :model="formValidate" :rules="ruleValidate" :label-width="100">
                     <FormItem label="Name" prop="name">
                         <Input v-model="formValidate.name" placeholder="Enter your name"></Input>
                     </FormItem>
@@ -273,6 +277,7 @@
                     city: '',
                     gender: '',
                     interest: [],
+                    keywords: [],
                     date: '',
                     time: '',
                     desc: '',
@@ -307,6 +312,10 @@
                     interest: [
                         { required: true, type: 'array', min: 1, message: 'Choose at least one hobby', trigger: 'change' },
                         { type: 'array', max: 2, message: 'Choose two hobbies at best', trigger: 'change' }
+                    ],
+                    keywords: [
+                        { required: true, type: 'array', min: 1, message: 'Enter at least one keyword', trigger: 'blur' },
+                        { type: 'array', max: 2, message: 'Enter two keywords at best', trigger: 'blur' }
                     ],
                     date: [
                         { required: true, type: 'date', message: 'Please select the date', trigger: 'change' }

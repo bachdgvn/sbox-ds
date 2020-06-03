@@ -33,7 +33,7 @@
             position: relative;
             top: 0;
             left: 0;
-            border: 1px solid @border-color-base;
+            border: 2px solid @border-color-base;
             border-radius: 2px;
             background-color: #fff;
             transition: border-color @transition-time @ease-in-out, background-color @transition-time @ease-in-out, box-shadow @transition-time @ease-in-out;
@@ -287,6 +287,14 @@
         font-size: @font-size-base;
         &-item {
             display: inline-block;
+        }
+    }
+
+    .@{form-item-prefix-cls}-error{
+        .@{checkbox-prefix-cls} {
+            &-inner{
+                border-color: @error-color;
+            }
         }
     }
 }

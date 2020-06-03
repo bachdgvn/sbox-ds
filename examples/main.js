@@ -56,6 +56,10 @@ const router = new VueRouter({
             component: (resolve) => require(['./routers/input.vue'], resolve)
         },
         {
+            path: '/input-tag',
+            component: (resolve) => require(['./routers/input-tag.vue'], resolve)
+        },
+        {
             path: '/radio',
             component: (resolve) => require(['./routers/radio.vue'], resolve)
         },

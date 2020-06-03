@@ -80,6 +80,9 @@
                             <MenuItem name="input" to="/input">
                                 Input
                             </MenuItem>
+                            <MenuItem name="inputtag" to="/input-tag">
+                                InputTag
+                            </MenuItem>
                             <MenuItem name="inputnumber" to="/input-number">
                                 InputNumber
                             </MenuItem>
