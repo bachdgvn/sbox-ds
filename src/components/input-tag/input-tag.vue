@@ -22,13 +22,13 @@
                 :maxlength="inputMaxlength"
                 @keydown.delete.stop="removeLastTag"
                 @keydown="addNew"
-                @focus="handleInputFocus"
                 @blur="handleInputBlur"
+                :spellcheck="spellcheck"
+                :disabled="itemDisabled"
                 @compositionstart="handleInputComposition"
                 @compositionupdate="handleInputComposition"
                 @compositionend="handleInputComposition"
             />
-            <span class="ivu-input-word-count" v-if="showWordLimit">{{ textLength }}/{{ upperLimit }}</span>
         </div>
     </div>
 </template>
@@ -63,7 +63,7 @@
         props: {
             type: {
                 validator (value) {
-                    return oneOf(value, ['text', 'textarea', 'password', 'url', 'email', 'date', 'number', 'tel']);
+                    return oneOf(value, ['text', 'url', 'email', 'number', 'tel']);
                 },
                 default: 'text'
             },
@@ -90,15 +90,6 @@
                 type: Boolean,
                 default: false
             },
-            icon: String,
-            autosize: {
-                type: [Boolean, Object],
-                default: false
-            },
-            rows: {
-                type: Number,
-                default: 1
-            },
             readonly: {
                 type: Boolean,
                 default: false
@@ -114,37 +105,8 @@
                 type: Boolean,
                 default: false
             },
-            autocomplete: {
-                type: String,
-                default: 'off'
-            },
-            clearable: {
-                type: Boolean,
-                default: false
-            },
             elementId: {
                 type: String
-            },
-            prefix: {
-                type: String,
-                default: ''
-            },
-            suffix: {
-                type: String,
-                default: ''
-            },
-            search: {
-                type: Boolean,
-                default: false
-            },
-            enterButton: {
-                type: [Boolean, String],
-                default: false
-            },
-            // 4.0.0
-            showWordLimit: {
-                type: Boolean,
-                default: false
             },
             validate: {
                 type: String | Function | Object,
@@ -183,27 +145,18 @@
                 isOnComposition: false,
                 newTag: '',
                 innerTags: [...this.value],
-                isInputActive: false
+                isActive: false
             };
         },
         computed: {
             isLimit: function() {
                 return this.limit > 0 && Number(this.limit) === this.innerTags.length;
             },
-            currentType () {
-                return this.type;
-            },
             wrapClasses () {
                 return [
                     `${prefixCls}-wrapper`,
                     {
                         [`${prefixCls}-wrapper-${this.size}`]: !!this.size,
-                        [`${prefixCls}-group`]: this.prepend || this.append || (this.search && this.enterButton),
-                        [`${prefixCls}-group-${this.size}`]: (this.prepend || this.append || (this.search && this.enterButton)) && !!this.size,
-                        [`${prefixCls}-group-with-prepend`]: this.prepend,
-                        [`${prefixCls}-group-with-append`]: this.append || (this.search && this.enterButton),
-                        [`${prefixCls}-hide-icon`]: this.append,  // #554
-                        [`${prefixCls}-with-search`]: (this.search && this.enterButton)
                     }
                 ];
             },
@@ -212,11 +165,9 @@
                     `${prefixCls}`,
                     {
                         [`${prefixCls}-${this.size}`]: !!this.size,
+                        [`${prefixCls}-focused`]: this.isActive,
                         [`${prefixCls}-disabled`]: this.itemDisabled,
-                        [`${prefixCls}-with-prefix`]: this.showPrefix,
-                        [`${prefixCls}-with-suffix`]: this.showSuffix || (this.search && this.enterButton === false),
-                        'read-only': this.readonly,
-                        'vue-input-tag-wrapper--active': this.isInputActive
+                        [`${prefixCls}-read-only`]: this.readonly,
                     }
                 ];
             },
@@ -237,11 +188,7 @@
                 this.innerTags = [...this.value];
                 this.dispatch('FormItem', 'on-form-change', value);
             },
-            handleInputFocus () {
-                this.isInputActive = true;
-            },
             handleInputBlur (e) {
-                this.isInputActive = false;
                 this.addNew(e);
             },
             handleInputComposition(event) {
@@ -253,16 +200,22 @@
                 }
             },
             handleFocus () {
+                if(this.itemDisabled) return;
                 if (this.readOnly || !this.$el.querySelector('input')) {
                     return;
                 }
+                this.isActive = true;
                 this.$el.querySelector('input').focus();
             },
             handleBlur (event) {
-                this.$emit('on-blur', event);
-                const vModelValue = this.innerTags;
-                this.$emit('input', vModelValue);
-                this.dispatch('FormItem', 'on-form-blur', this.innerTags);
+                if(this.itemDisabled) return;
+                if(this.isActive) {
+                    this.isActive = false;
+                    this.$emit('on-blur', event);
+                    const vModelValue = this.innerTags;
+                    this.$emit('input', vModelValue);
+                    this.dispatch('FormItem', 'on-form-blur', this.innerTags);
+                }
             },
             handleClear () {
                 const e = { target: { value: [] } };
@@ -319,10 +272,12 @@
                 return true;
             },
             remove(index) {
+                if(this.itemDisabled) return;
                 this.innerTags.splice(index, 1);
                 this.tagChange();
             },
             removeLastTag() {
+                if(this.itemDisabled) return;
                 if (this.newTag) {
                     return;
                 }

@@ -104,6 +104,9 @@
                             <Option value="shenzhen">Sydney</Option>
                         </Select>
                     </FormItem>
+                    <FormItem label="Keywords" prop="keywords">
+                        <InputTag v-model="formValidate.keywords" placeholder="Enter your keywords"></InputTag>
+                    </FormItem>
                     <FormItem label="Date">
                         <Row>
                             <Col span="11">
