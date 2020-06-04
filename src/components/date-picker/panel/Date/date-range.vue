@@ -11,7 +11,7 @@
                 <div :class="[datePrefixCls + '-header']" v-show="currentView !== 'time'">
                     <span
                         :class="iconBtnCls('prev', '-double')"
-                        @click="prevYear('left')"><Icon type="arrow-ios-back"></Icon></span>
+                        @click="prevYear('left')"><Icon type="arrowhead-left-outline"></Icon></span>
                     <span
                         v-if="leftPickerTable === 'date-table'"
                         :class="iconBtnCls('prev')"
@@ -29,7 +29,7 @@
                         v-if="splitPanels && leftPickerTable === 'date-table'"
                         :class="iconBtnCls('next')"
                         @click="nextMonth('left')"
-                        v-show="currentView === 'date'"><Icon type="arrow-ios-forward"></Icon></span>
+                        v-show="currentView === 'date'"><Icon type="arrowhead-right-outline"></Icon></span>
                 </div>
                 <component
                     :is="leftPickerTable"
