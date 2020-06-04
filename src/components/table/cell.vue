@@ -22,7 +22,7 @@
         </template>
         <template v-if="renderType === 'expand' && !row._disableExpand">
             <div :class="expandCls" @click="toggleExpand">
-                <Icon type="ios-arrow-forward"></Icon>
+                <Icon type="arrow-ios-forward"></Icon>
             </div>
         </template>
         <table-expand

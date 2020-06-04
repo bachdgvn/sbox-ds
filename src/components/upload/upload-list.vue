@@ -63,25 +63,25 @@
             },
             format (file) {
                 const format = file.name.split('.').pop().toLocaleLowerCase() || '';
-                let type = 'ios-document-outline';
+                let type = 'file-outline';
 
                 if (['gif','jpg','jpeg','png','bmp','webp'].indexOf(format) > -1) {
-                    type = 'ios-image';
+                    type = 'image-outline';
                 }
                 if (['mp4','m3u8','rmvb','avi','swf','3gp','mkv','flv'].indexOf(format) > -1) {
-                    type = 'ios-film';
+                    type = 'film-outline';
                 }
                 if (['mp3','wav','wma','ogg','aac','flac'].indexOf(format) > -1) {
-                    type = 'ios-musical-notes';
+                    type = 'music-outline';
                 }
                 if (['doc','txt','docx','pages','epub','pdf'].indexOf(format) > -1) {
-                    type = 'md-document';
+                    type = 'file-text-outline';
                 }
                 if (['numbers','csv','xls','xlsx'].indexOf(format) > -1) {
-                    type = 'ios-stats';
+                    type = 'activity-outline';
                 }
                 if (['keynote','ppt','pptx'].indexOf(format) > -1) {
-                    type = 'ios-videocam';
+                    type = 'video-outline';
                 }
 
                 return type;

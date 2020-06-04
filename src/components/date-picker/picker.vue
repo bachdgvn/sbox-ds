@@ -289,7 +289,7 @@
                 let type = '';
 
                 if (this.type === 'time' || this.type === 'timerange') {
-                    type = 'ios-time-outline';
+                    type = 'clock-outline';
 
                     if (this.$IVIEW) {
                         if (this.$IVIEW.timePicker.customIcon) {
@@ -299,7 +299,7 @@
                         }
                     }
                 } else {
-                    type = 'ios-calendar-outline';
+                    type = 'calendar-outline';
 
                     if (this.$IVIEW) {
                         if (this.$IVIEW.datePicker.customIcon) {

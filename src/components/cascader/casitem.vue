@@ -2,7 +2,7 @@
     <li :class="classes">
         {{ data.label }}
         <Icon :type="arrowType" :custom="customArrowType" :size="arrowSize" v-if="showArrow" />
-        <i v-if="showLoading" class="ivu-icon ivu-icon-ios-loading ivu-load-loop ivu-cascader-menu-item-loading"></i>
+        <i v-if="showLoading" class="ivu-icon ivu-icon-loading ivu-load-loop ivu-cascader-menu-item-loading"></i>
     </li>
 </template>
 <script>
@@ -34,7 +34,7 @@
             },
             // 3.4.0, global setting customArrow 有值时，arrow 赋值空
             arrowType () {
-                let type = 'ios-arrow-forward';
+                let type = 'arrow-ios-forward';
 
                 if (this.$IVIEW) {
                     if (this.$IVIEW.cascader.customItemArrow) {

@@ -98,7 +98,7 @@
             triggerIconClasses () {
                 return [
                     'ivu-icon',
-                    `ivu-icon-ios-arrow-${this.reverseArrow ? 'forward' : 'back'}`,
+                    `ivu-icon-arrow-ios-${this.reverseArrow ? 'forward' : 'back'}`,
                     `${prefixCls}-trigger-icon`,
                 ];
             },

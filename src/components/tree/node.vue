@@ -4,7 +4,7 @@
             <li>
                 <span :class="arrowClasses" @click="handleExpand">
                     <Icon v-if="showArrow" :type="arrowType" :custom="customArrowType" :size="arrowSize" />
-                    <Icon v-if="showLoading" type="ios-loading" class="ivu-load-loop" />
+                    <Icon v-if="showLoading" type="loading" class="ivu-load-loop" />
                 </span>
                 <Checkbox
                         v-if="showCheckbox"
@@ -138,7 +138,7 @@
             },
             // 3.4.0, global setting customArrow 有值时，arrow 赋值空
             arrowType () {
-                let type = 'ios-arrow-forward';
+                let type = 'arrow-ios-forward';
 
                 if (this.$IVIEW) {
                     if (this.$IVIEW.tree.customArrow) {

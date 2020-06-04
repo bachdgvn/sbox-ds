@@ -362,7 +362,7 @@ export default {
         },
         // 3.4.0, global setting customArrow 有值时，arrow 赋值空
         arrowType () {
-            let type = 'ios-arrow-down';
+            let type = 'arrow-ios-down';
 
             if (this.$IVIEW) {
                 if (this.$IVIEW.colorPicker.customArrow) {
