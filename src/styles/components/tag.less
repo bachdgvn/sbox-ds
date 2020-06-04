@@ -4,9 +4,9 @@
 .@{tag-prefix-cls} {
     display: inline-block;
     height: 22px;
-    line-height: 22px;
-    //margin: 2px 4px 2px 0;
+    line-height: 24px;
     padding: 0 8px;
+    box-sizing: content-box;
     border: 2px solid @border-color-split;
     border-radius: @btn-border-radius-small;
     background: @background-color-base;
@@ -61,7 +61,7 @@
 
     &-dot{
         height: 32px;
-        line-height: 32px;
+        line-height: 34px;
         border: 2px solid @border-color-split !important;
         color: @text-color !important;
         background: #fff !important;
@@ -114,7 +114,7 @@
             .@{tag-close-prefix-cls} {
                 margin-left: 18px !important;
                 left: 4px;
-                top: -1px;
+                top: 1px;
             }
         }
 
@@ -190,7 +190,7 @@
         color: #666;
         opacity: 0.66;
         position: relative;
-        top: -1px;
+        //top: 1px;
         //transition: all @transition-time @ease-in-out;
 
         &:hover {
@@ -259,10 +259,10 @@
             }
         }
         .ivu-tag-size-large&-@{color} {
-            line-height: 30px;
+            line-height: 32px;
         }
         .ivu-tag-size-medium&-@{color} {
-            line-height: 26px;
+            line-height: 28px;
         }
     }
 
