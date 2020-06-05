@@ -40,7 +40,7 @@
                 EN
             </Button>
         </ButtonGroup>
-        <br><br><br>
+        <Divider></Divider><br>
         <Button type="default">Default</Button>
         <Button type="primary">Primary</Button>
         <Button type="dashed">Dashed</Button>
@@ -49,7 +49,7 @@
         <Button type="warning">Warning</Button>
         <Button type="error">Error</Button>
         <Button type="text">Text</Button>
-        <br><br><br>
+        <Divider></Divider><br>
         <Button type="default" disabled>Default</Button>
         <Button type="primary" disabled>Primary</Button>
         <Button type="dashed" disabled>Dashed</Button>
@@ -58,7 +58,7 @@
         <Button type="warning" disabled>Warning</Button>
         <Button type="error" disabled>Error</Button>
         <Button type="text" disabled>Text</Button>
-        <br><br><br>
+        <Divider></Divider><br>
         <div style="padding: 20px;background: rgb(190, 200, 200)">
             <Button type="default" ghost>Default</Button>
             <Button type="primary" ghost>Primary</Button>
@@ -68,7 +68,7 @@
             <Button type="warning" ghost>Warning</Button>
             <Button type="error" ghost>Error</Button>
             <Button type="text" ghost>Text</Button>
-            <br><br><br>
+            <Divider></Divider><br>
             <Button type="default" ghost disabled>Default</Button>
             <Button type="primary" ghost disabled>Primary</Button>
             <Button type="dashed" ghost disabled>Dashed</Button>
@@ -87,11 +87,11 @@
         <Button type="primary" to="/" size="large">Primary large with router</Button>
         <Button type="primary" size="large" shape="circle">Primary large circle</Button>
         <Button type="primary" to="/" size="large" shape="circle">Primary large circle with router</Button>
-        <br><br><br>
+        <Divider></Divider><br>
         <Button type="primary" icon="info-outline" size="small">Search</Button>
         <Button type="primary" icon="info-outline" size="default">Search</Button>
         <Button type="primary" icon="info-outline" size="large">Search</Button>
-        <br><br><br>
+        <Divider></Divider><br>
         <Button @click="hc">Open Menu2</Button>
         <Button to="/menu" @click="hc">Open Menu2</Button>
         <Button to="/menu" replace>Open Menu Replace</Button>
@@ -114,22 +114,22 @@
         <Button type="default">Ghost</Button>
         <Button type="dashed">Dashed</Button>
         <Button type="text">Text</Button>
-        <br><br>
+        <Divider></Divider>
         <Button type="info">Info</Button>
         <Button type="success">Success</Button>
         <Button type="warning">Warning</Button>
         <Button type="error">Error</Button>
-        <br><br>
+        <Divider></Divider>
         <Button type="primary" shape="circle" icon="search"></Button>
         <Button type="primary" icon="search">Search</Button>
         <Button type="primary" shape="circle" icon="search">Search</Button>
         <Button type="primary" shape="circle">Circle</Button>
-        <br><br>
+        <Divider></Divider>
         <Button type="default" shape="circle" icon="search"></Button>
         <Button type="default" icon="search">Search</Button>
         <Button type="default" shape="circle" icon="search">Search</Button>
         <Button type="default" shape="circle">Circle</Button>
-        <br><br>
+        <Divider></Divider>
         <Button>Default</Button>
         <Button disabled>Default(Disabled)</Button>
         <br>
@@ -144,11 +144,11 @@
         <br>
         <Button type="text">Text</Button>
         <Button type="text" disabled>Text(Disabled)</Button>
-        <br><br>
+        <Divider></Divider>
 
-        <br><br>
+        <Divider></Divider>
         <h4>Button group</h4>
-        <br><br>
+        <Divider></Divider>
         <Button-group>
             <Button>button 1</Button>
             <Button type="primary">button 2</Button>
@@ -164,9 +164,9 @@
             <Button type="default">M</Button>
             <Button type="dashed">R</Button>
         </Button-group>
-        <br><br>
+        <Divider></Divider>
         <h4>Button group with text & icon</h4>
-        <br><br>
+        <Divider></Divider>
         <Button-group>
             <Button type="primary">
                 <Icon type="chevron-left"></Icon>
@@ -187,9 +187,9 @@
             <Button type="default" icon="crop"></Button>
             <Button type="default" icon="cloud-download-outline"></Button>
         </Button-group>
-        <br><br>
+        <Divider></Divider>
         <h4>Button group circle</h4>
-        <br><br>
+        <Divider></Divider>
         <Button-group shape="circle">
             <Button type="primary">
                 <Icon type="chevron-left"></Icon>
@@ -210,9 +210,9 @@
             <Button type="default" icon="crop"></Button>
             <Button type="default" icon="cloud-download-outline"></Button>
         </Button-group>
-        <br><br>
+        <Divider></Divider>
         <h4>Button size</h4>
-        <br><br>
+        <Divider></Divider>
         <Button-group size="large">
             <Button type="default">Large</Button>
             <Button type="default">Large</Button>
@@ -225,7 +225,7 @@
             <Button type="default">Small</Button>
             <Button type="default">Small</Button>
         </Button-group>
-        <br><br>
+        <Divider></Divider>
         <Button-group size="large" shape="circle">
             <Button type="default">Large</Button>
             <Button type="default">Large</Button>
@@ -239,9 +239,9 @@
             <Button type="default">Small</Button>
         </Button-group>
 
-        <br><br>
+        <Divider></Divider>
         <Button to="/icon">Open New Window</Button>
-        <br><br><br>
+        <Divider></Divider><br>
         <ButtonGroup vertical size="small">
             <Button icon="facebook"></Button>
             <Button icon="twitter"></Button>
@@ -260,7 +260,7 @@
             <Button icon="linkedin"></Button>
             <Button icon="behance"></Button>
         </ButtonGroup>
-        <br><br>
+        <Divider></Divider>
         <Button>
             <Icon type="alert-circle" />
             Button with left-right icon
@@ -284,15 +284,15 @@
                 <Radio label="default">Default</Radio>
                 <Radio label="small">small</Radio>
             </RadioGroup>
-            <br><br>
+            <Divider></Divider>
             <Button :size="buttonSize" type="primary">Primary</Button>
             <Button :size="buttonSize" type="default">Default</Button>
             <Button :size="buttonSize" type="dashed">Dashed</Button>
             <Button :size="buttonSize" type="text">Text</Button>
-            <br><br>
+            <Divider></Divider>
             <Button :size="buttonSize" icon="droplet-off-outline" type="primary" shape="circle"></Button>
             <Button :size="buttonSize" icon="droplet-off-outline" type="primary">Droplets</Button>
-            <br><br>
+            <Divider></Divider>
             <ButtonGroup :size="buttonSize">
                 <Button :size="buttonSize" type="primary">
                     <Icon type="arrow-back" />
@@ -303,12 +303,26 @@
                     <Icon type="arrow-forward" />
                 </Button>
             </ButtonGroup>
-            <br><br>
-            <Button :size="buttonSize" icon="droplet-off-outline"
+            <Divider></Divider>
+            <Button :size="buttonSize"
                     long
                     :loading="true" type="primary">Droplets</Button>
         </div>
         <Divider></Divider>
+
+        <Button size="small" icon="droplet-off-outline"
+                to="/"
+                long type="primary">Droplets</Button>
+        <Divider></Divider>
+
+        <Button icon="droplet-off-outline"
+                to="/"
+                long type="primary">Droplets</Button>
+        <Divider></Divider>
+
+        <Button :size="large" icon="droplet-off-outline"
+                to="/"
+                long type="primary">Droplets</Button>
     </div>
 </template>
 <script>
