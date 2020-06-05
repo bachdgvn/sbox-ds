@@ -69,7 +69,9 @@
             },
             value: {
                 type: Array,
-                default: []
+                default() {
+                    return [];
+                }
             },
             size: {
                 validator (value) {
