@@ -16,7 +16,7 @@
             <input
                 type="text"
                 ref="inputTag"
-                v-model="newTag"
+                v-model.trim="newTag"
                 v-if="!readonly && !isLimit"
                 :placeholder="placeholder"
                 :maxlength="inputMaxlength"
