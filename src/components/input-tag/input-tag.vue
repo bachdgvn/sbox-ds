@@ -9,7 +9,7 @@
             <div class="ivu-tag ivu-tag-checked"
                  v-for="(tag, index) in innerTags" :key="index">
                 <span class="ivu-tag-text">{{ tag }}</span>
-                <i v-if="!readonly" @click.prevent.stop="remove(index)"
+                <i v-if="!readonly" @click.prevent.stop="remove(tag, index)"
                    class="ivu-icon ivu-icon-close"></i>
             </div>
 
@@ -241,6 +241,7 @@
                     this.innerTags.push(tag);
                     this.setCurrentValue(this.innerTags);
                     e && e.preventDefault();
+                    this.$emit('on-create', tag);
                 }
             },
             validateIfNeeded(tagValue) {
@@ -264,18 +265,20 @@
                 }
                 return true;
             },
-            remove(index) {
+            remove(tag, index) {
                 if(this.itemDisabled) return;
                 this.innerTags.splice(index, 1);
                 this.setCurrentValue(this.innerTags);
+                this.$emit('on-remove', tag);
             },
             removeLastTag() {
                 if(this.itemDisabled) return;
                 if (this.newTag) {
                     return;
                 }
-                this.innerTags.pop();
+                const tag = this.innerTags.pop();
                 this.setCurrentValue(this.innerTags);
+                this.$emit('on-remove', tag);
             },
         },
         watch: {
