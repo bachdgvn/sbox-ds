@@ -11,6 +11,14 @@
                     <Icon type="chrome-outline"></Icon>
                     <span class="i-name">chrome-outline</span><span class="i-code">0xE902</span>
                 </Col>
+                <Col span="6" class="icon-box" title="Code: 0xe90e">
+                    <Icon type="profile"></Icon>
+                    <span class="i-name">profile</span><span class="i-code">0xe90e</span>
+                </Col>
+                <Col span="6" class="icon-box" title="Code: 0xe90f">
+                    <Icon type="profile-outline"></Icon>
+                    <span class="i-name">profile-outline</span><span class="i-code">0xe90f</span>
+                </Col>
             </Row>
             <Row>
                 <Col span="6" class="icon-box" title="Code: 0xe800">
