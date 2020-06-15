@@ -3,6 +3,16 @@
         <h1>Sbox Icons Cheatsheet</h1>
         <div>
             <Row>
+                <Col span="6" class="icon-box" title="Code: 0xE88E">
+                    <Icon type="chrome"></Icon>
+                    <span class="i-name">chrome</span><span class="i-code">0xE88E</span>
+                </Col>
+                <Col span="6" class="icon-box" title="Code: 0xE902">
+                    <Icon type="chrome-outline"></Icon>
+                    <span class="i-name">chrome-outline</span><span class="i-code">0xE902</span>
+                </Col>
+            </Row>
+            <Row>
                 <Col span="6" class="icon-box" title="Code: 0xe800">
                     <Icon type="arrow-circle-left-outline"></Icon>
                     <span class="i-name">arrow-circle-left-outline</span><span class="i-code">0xe800</span>
