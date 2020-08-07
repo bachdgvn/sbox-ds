@@ -197,7 +197,7 @@
                 this.$Spin.show();
                 setTimeout(() => {
                     this.$Spin.hide();
-                }, 3000)
+                }, 300000)
             },
             hide () {
                 this.$Spin.hide();

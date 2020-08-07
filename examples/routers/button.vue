@@ -4,8 +4,16 @@
         <Button to="/button">跳转到 Button（当前路径）</Button>
         <Button to="/button" replace>跳转到 Button（当前路径, replace）</Button>
         <Divider></Divider>
+
+        <div>
+            <Button :size="buttonSize"
+                    long
+                    :loading="true" type="primary">Droplets</Button>
+        </div>
+
         <Button icon="github" size="small" shape="circle"></Button>
         <Button icon="github" shape="circle"></Button>
+        <Button loading shape="circle"></Button>
         <Button icon="github" size="large" shape="circle"></Button>
 
         <Button icon="github" size="small"></Button>
@@ -43,6 +51,7 @@
         <Divider></Divider><br>
         <Button type="default">Default</Button>
         <Button type="primary">Primary</Button>
+        <Button type="primary" loading>Primary</Button>
         <Button type="dashed">Dashed</Button>
         <Button type="info">Info</Button>
         <Button type="success">Success</Button>
@@ -53,6 +62,7 @@
         <Button type="default" disabled>Default</Button>
         <Button type="primary" disabled>Primary</Button>
         <Button type="dashed" disabled>Dashed</Button>
+        <Button type="dashed" disabled loading>Dashed</Button>
         <Button type="info" disabled>Info</Button>
         <Button type="success" disabled>Success</Button>
         <Button type="warning" disabled>Warning</Button>
@@ -77,6 +87,7 @@
             <Button type="warning" ghost disabled>Warning</Button>
             <Button type="error" ghost disabled>Error</Button>
             <Button type="text" ghost disabled>Text</Button>
+            <Button type="text" ghost disabled loading>Text</Button>
         </div>
         <Divider></Divider>
         <Button type="primary">Primary</Button>

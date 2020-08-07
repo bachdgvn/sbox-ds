@@ -1,28 +1,114 @@
 @spin-prefix-cls: ~"@{css-prefix}spin";
-@spin-dot-size-small: 12px;
-@spin-dot-size: 20px;
-@spin-dot-size-large: 32px;
+@spin-loader-size-small: 12px;
+@spin-loader-size: 14px;
+@spin-loader-size-large: 20px;
+@spin-loader-size-big: 32px;
 
 .@{spin-prefix-cls} {
     color: @primary-color;
     vertical-align: middle;
     text-align: center;
 
-    &-dot {
+    .loader {
         position: relative;
+        .square(@spin-loader-size);
+        display: inline-flex;
+        vertical-align: inherit;
+        .circular {
+            -webkit-animation: rotate 2s linear infinite;
+            animation: rotate 2s linear infinite;
+            height: 100%;
+            -webkit-transform-origin: center center;
+            -ms-transform-origin: center center;
+            transform-origin: center center;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+        }
+        .path {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+            -webkit-animation: dash 1.5s ease-in-out infinite;
+            animation: dash 1.5s ease-in-out infinite;
+            stroke-linecap: round;
+            //stroke: @text-color;
+        }
+    }
+
+    &-default {
+        .loader {
+            .path{
+                stroke: @text-color;
+            }
+        }
+    }
+
+    &-primary {
+        .loader {
+            .path{
+                stroke: @primary-color;
+            }
+        }
+    }
+
+    &-white {
+        .loader {
+            .path{
+                stroke: @white;
+            }
+        }
+    }
+
+    &-alone{
         display: block;
-        border-radius: 50%;
-        background-color: @primary-color;
-        .square(@spin-dot-size);
-        animation: ani-spin-bounce 1s 0s ease-in-out infinite;
     }
 
-    &-large &-dot {
-        .square(@spin-dot-size-large);
+    &-in-button{
+        display: inline-block;
     }
 
-    &-small &-dot {
-        .square(@spin-dot-size-small);
+    @keyframes rotate {
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes dash {
+        0% {
+            stroke-dasharray: 1, 200;
+            stroke-dashoffset: 0;
+        }
+        50% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -35;
+        }
+        100% {
+            stroke-dasharray: 89, 200;
+            stroke-dashoffset: -124;
+        }
+    }
+
+    &-big {
+        .loader {
+            .square(@spin-loader-size-big);
+        }
+    }
+
+    &-large {
+        .loader {
+            .square(@spin-loader-size-large);
+        }
+    }
+
+    &-small {
+        .loader {
+            .square(@spin-loader-size-small);
+        }
     }
 
     &-fix {
@@ -52,12 +138,12 @@
         transform: translate(-50%, -50%);
     }
 
-    &-fix &-dot {
+    &-fix &-loader {
         display: inline-block;
     }
 
     &-text,
-    &-show-text &-dot {
+    &-show-text &-loader {
         display: none;
     }
 
@@ -77,16 +163,5 @@
         border: 1px solid @border-color-base;
         border-top: 0;
         border-left: 0;
-    }
-}
-
-@keyframes ani-spin-bounce {
-    0% {
-        transform: scale(0);
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 0;
     }
 }

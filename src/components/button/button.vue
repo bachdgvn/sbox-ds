@@ -1,12 +1,16 @@
 <template>
     <component :is="tagName" :class="classes" :disabled="itemDisabled" @click="handleClickLink" v-bind="tagProps">
-        <Icon class="ivu-load-loop" type="loading" v-if="loading"></Icon>
+        <Spin v-if="loading"
+              type="in-button"
+              :size="spinSize"
+              :color="spinLoadingColor"></Spin>
         <Icon :type="icon" :custom="customIcon" v-if="(icon || customIcon) && !loading"></Icon>
-        <span v-if="showSlot && !loading" ref="slot"><slot></slot></span>
+        <span v-if="showSlot" ref="slot"><slot></slot></span>
     </component>
 </template>
 <script>
     import Icon from '../icon';
+    import Spin from '../spin';
     import { oneOf } from '../../utils/assist';
     import mixinsLink from '../../mixins/link';
     import mixinsForm from '../../mixins/form';
@@ -16,7 +20,7 @@
     export default {
         name: 'Button',
         mixins: [ mixinsLink, mixinsForm ],
-        components: { Icon },
+        components: { Icon, Spin },
         props: {
             type: {
                 validator (value) {
@@ -79,6 +83,23 @@
                         [`${prefixCls}-ghost`]: this.ghost
                     }
                 ];
+            },
+            spinSize() {
+                return this.size;
+            },
+            spinLoadingColor() {
+                const spinSupportedColors = {
+                    'white': ['primary', 'success', 'error', 'warning', 'info'],
+                    'primary': ['default', 'dashed'],
+                    'default': ['text'],
+                };
+                let color = 'default';
+                Object.keys(spinSupportedColors).forEach(key => {
+                    if (spinSupportedColors[key].includes(this.type)) {
+                        color = key;
+                    }
+                });
+                return color;
             },
             // Point out if it should render as <a> tag
             isHrefPattern() {
