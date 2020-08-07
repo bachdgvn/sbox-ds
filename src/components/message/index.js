@@ -13,7 +13,7 @@ let messageInstance;
 let name = 1;
 
 const iconTypes = {
-    'info': 'info-circle',
+    'info': 'info',
     'success': 'checkmark-circle-2',
     'warning': 'alert-triangle',
     'error': 'close-circle',
