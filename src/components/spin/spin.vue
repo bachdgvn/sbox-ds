@@ -25,10 +25,10 @@
         props: {
             size: {
                 validator (value) {
-                    return oneOf(value, ['small', 'large', 'default']);
+                    return oneOf(value, ['small', 'large', 'big', 'default']);
                 },
                 default () {
-                    return !this.$IVIEW || this.$IVIEW.size === '' ? 'default' : this.$IVIEW.size;
+                    return 'default';
                 }
             },
             color: {
